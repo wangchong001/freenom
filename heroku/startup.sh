@@ -41,8 +41,6 @@ echo -e "${CRON_COMMAND}" >> /etc/crontabs/root
 
 echo -e "[Info] 计划任务：${CRON_COMMAND}"
 
-php run
-
 # 替换端口变量
 envsubst '\$PORT' < /app/nginx.template.conf > /app/nginx.conf
 
