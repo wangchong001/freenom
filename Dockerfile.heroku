@@ -13,6 +13,8 @@ COPY . ./
 COPY ./heroku/nginx.template.conf ./
 COPY ./heroku/html ./html/
 
+RUN chown 777 ./html/run.php
+
 RUN set -eux \
     && apk update \
     && apk add --no-cache tzdata bash nginx gettext
