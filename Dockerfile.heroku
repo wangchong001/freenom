@@ -13,7 +13,7 @@ COPY . ./
 COPY ./heroku/nginx.template.conf ./
 COPY ./heroku/html ./html/
 
-RUN chown 777 ./html/run.php
+RUN chown 777 ./html/run.php && chmod +x ./html/run.php
 
 RUN set -eux \
     && apk update \
